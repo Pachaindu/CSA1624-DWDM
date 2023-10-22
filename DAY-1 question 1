@@ -1,0 +1,9 @@
+age_groups <- c("1-5", "5-15", "15-20", "20-50", "50-80", "80-110")
+frequencies <- c(200, 450, 300, 1500, 700, 44
+cumulative_frequency <- cumsum(frequencies)
+total_frequency <- sum(frequencies)
+half_total_frequency <- total_frequency / 2
+median_age_group <- age_groups[which(cumulative_frequency >= half_total_frequency)[1]]
+median_value <- as.numeric(gsub(" .*", "", median_age_group)) + 0.5
+# Print the approximate median value
+cat("Approximate Median Value:", median_value, "\n")
