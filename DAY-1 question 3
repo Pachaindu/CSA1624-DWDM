@@ -1,0 +1,19 @@
+# Define the data
+data <- c(200, 300, 400, 600, 1000)
+
+# Min-Max Normalization
+min_value <- min(data)
+max_value <- max(data)
+
+normalized_data_min_max <- (data - min_value) / (max_value - min_value)
+
+# Print the normalized data
+cat("Min-Max Normalization Result:", normalized_data_min_max, "\n")
+# Z-Score Normalization
+mean_value <- mean(data)
+std_deviation <- sd(data)
+
+normalized_data_z_score <- (data - mean_value) / std_deviation
+
+# Print the normalized data
+cat("Z-Score Normalization Result:", normalized_data_z_score, "\n")
