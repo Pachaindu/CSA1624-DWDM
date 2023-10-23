@@ -1,0 +1,9 @@
+# Load the AirPassengers dataset
+data("AirPassengers")
+
+# Create a histogram with custom bin settings
+hist(AirPassengers, breaks = seq(100, 700, by = 150), 
+     main = "Histogram of AirPassengers Dataset",
+     xlab = "Number of Passengers", 
+     ylab = "Frequency", 
+     col = "lightblue")
