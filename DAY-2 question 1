@@ -1,0 +1,23 @@
+# Create a matrix with the given data
+data_matrix <- matrix(c(18, 22, 20, 2, 28, 40, 20, 10, 40), ncol = 3,
+                      dimnames = list(c("5-6 years", "7-8 years", "9-10 years"), c("A", "B", "C")))
+
+# Calculate the sample covariance between B and C
+cov_bc <- cov(data_matrix["B", "C"])
+
+# Calculate the sample covariance matrix for the preferences
+cov_matrix <- cov(data_matrix)
+
+# Calculate the sample correlation between B and C
+cor_bc <- cor(data_matrix["B", "C"])
+
+# Calculate the sample correlation matrix for the preferences
+cor_matrix <- cor(data_matrix)
+
+# Print the results
+cat("Sample Covariance between B and C:", cov_bc, "\n")
+cat("Sample Covariance Matrix for Preferences:\n")
+print(cov_matrix)
+cat("\nSample Correlation between B and C:", cor_bc, "\n")
+cat("Sample Correlation Matrix for Preferences:\n")
+print(cor_matrix)
