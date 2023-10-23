@@ -1,0 +1,28 @@
+# Define the minimum and maximum values for age in your dataset
+min_age <- # Minimum age value in your dataset
+max_age <- # Maximum age value in your dataset
+
+# Value to be normalized
+age_value <- 35
+
+# Min-Max normalization formula
+normalized_age <- (age_value - min_age) / (max_age - min_age)
+normalized_age
+# Standard deviation of age
+std_dev_age <- 12.94
+
+# Value to be normalized
+age_value <- 35
+
+# Z-score normalization formula
+normalized_age <- (age_value - mean_age) / std_dev_age
+normalized_age
+# Find the maximum absolute value of age in your dataset
+max_abs_age <- max(abs(your_age_data))
+
+# Value to be normalized
+age_value <- 35
+
+# Decimal scaling normalization formula
+normalized_age <- age_value / (10 ^ ceiling(log10(max_abs_age)))
+normalized_age
