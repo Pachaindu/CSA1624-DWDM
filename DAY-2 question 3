@@ -1,0 +1,18 @@
+# Create vectors for Class A and Class B results
+class_a <- c(76, 35, 47, 64, 95, 66, 89, 36, 84, 76, 35, 47, 64, 95, 66, 89, 36, 84)
+class_b <- c(51, 56, 84, 60, 59, 70, 63, 66, 50, 51, 56, 84, 60, 59, 70, 63, 66, 50)
+
+# (i) Calculate mean, median, and range for both classes
+mean_class_a <- mean(class_a)
+median_class_a <- median(class_a)
+range_class_a <- max(class_a) - min(class_a)
+
+mean_class_b <- mean(class_b)
+median_class_b <- median(class_b)
+range_class_b <- max(class_b) - min(class_b)
+
+cat("Class A - Mean:", mean_class_a, "Median:", median_class_a, "Range:", range_class_a, "\n")
+cat("Class B - Mean:", mean_class_b, "Median:", median_class_b, "Range:", range_class_b, "\n")
+
+# (ii) Create a boxplot for both classes
+boxplot(class_a, class_b, names = c("Class A", "Class B"), main = "Boxplot of Exam Scores")
