@@ -1,0 +1,14 @@
+# Load the mtcars dataset
+data(mtcars)
+
+# Create the initial plot with 'mpg' as x-axis and 'qsec' as y-axis
+plot(mtcars$mpg, mtcars$qsec, type = "o", col = "blue", xlab = "Miles per Gallon (mpg)", ylab = "Quarter Mile Time (qsec)")
+
+# Add more lines to the existing plot
+points(mtcars$mpg, mtcars$hp, type = "o", col = "red")
+points(mtcars$mpg, mtcars$wt, type = "o", col = "green")
+
+# Add a legend to differentiate lines
+legend("topright", legend = c("qsec", "hp", "wt"), col = c("blue", "red", "green"), lty = 1)
+
+# You can add more lines as needed using the 'points' function
