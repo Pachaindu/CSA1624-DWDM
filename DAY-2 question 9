@@ -1,0 +1,12 @@
+# Generate example data of points scored by players
+set.seed(123)  # for reproducibility
+points_scored <- c(65, 72, 78, 82, 85, 87, 90, 91, 94, 95, 96, 98, 100, 102, 105, 110, 120, 130, 140)
+
+# Create a box plot to visualize the distribution of points scored
+boxplot(points_scored, main = "Box Plot of Points Scored by Tennis Team Players",
+        ylab = "Points Scored")
+
+# Add title and labels to the plot
+title(main = "Box Plot of Points Scored by Tennis Team Players", xlab = "Players", ylab = "Points Scored")
+
+# Identify potential outliers based on the plot
