@@ -1,0 +1,20 @@
+# Create a vector of marks
+marks <- c(55, 60, 71, 63, 55, 65, 50, 55, 58, 59, 61, 63, 65, 67, 71, 72, 75)
+
+# (a) Equal-frequency (equi-depth) partitioning
+eq_freq_bins <- quantile(marks, probs = seq(0, 1, 1/3), na.rm = TRUE)
+
+# (b) Equal-width partitioning
+eq_width_bins <- cut(marks, breaks = 3)
+
+# Create histograms for both partitioning methods
+par(mfrow=c(2,1))  # Set up a 2x1 grid for plots
+
+# Plot the equal-frequency histogram
+hist(marks, breaks = eq_freq_bins, main = "Equal-Frequency Partitioning", xlab = "Marks", ylab = "Frequency")
+
+# Plot the equal-width histogram
+hist(marks, breaks = eq_width_bins, main = "Equal-Width Partitioning", xlab = "Marks", ylab = "Frequency")
+
+# Reset the plot layout
+par(mfrow=c(1,1))
