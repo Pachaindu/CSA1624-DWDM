@@ -1,0 +1,22 @@
+# Create a vector of data
+data <- c(200, 300, 400, 600, 1000)
+
+# Define the minimum and maximum values
+min_value <- 0
+max_value <- 1
+
+# Perform min-max normalization
+normalized_data_a <- (data - min(data)) / (max(data) - min(data)) * (max_value - min_value) + min_value
+
+normalized_data_a
+# Create a vector of data
+data <- c(200, 300, 400, 600, 1000)
+
+# Calculate the mean and standard deviation
+mean_data <- mean(data)
+sd_data <- sd(data)
+
+# Perform z-score normalization
+normalized_data_b <- (data - mean_data) / sd_data
+
+normalized_data_b
